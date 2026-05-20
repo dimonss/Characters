@@ -11,10 +11,22 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({ character, onClick
   // Show top 3 stats on the card preview
   const previewStats = character.stats.slice(0, 3);
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
   return (
     <div 
       className="character-card" 
       onClick={onClick}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      id={`character-card-${character.id}`}
+      aria-label={`Профиль персонажа: ${character.name}, роль: ${character.role}. Нажмите для просмотра личного дела.`}
       style={{ '--accent-color': character.accentColor } as React.CSSProperties}
     >
       <div className="character-card-image-container">

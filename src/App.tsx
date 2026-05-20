@@ -69,6 +69,8 @@ function App() {
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', width: '100%', maxWidth: '420px' }}>
             <input 
               type="text" 
+              id="character-search-input"
+              aria-label="Поиск по касту персонажей"
               className="sketch-input" 
               placeholder="Поиск по касту (Имя, Скиллы, Роль...)"
               value={searchTerm}

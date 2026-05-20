@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { type Character } from '../data/characters';
 import { X, Copy, Zap, Skull, Heart, Target } from 'lucide-react';
 
@@ -10,8 +10,9 @@ interface CharacterModalProps {
 
 export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpen, onClose }) => {
   const [showToast, setShowToast] = useState(false);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  // Handle ESC key press to close modal
+  // Handle ESC key press and focus management
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -20,6 +21,11 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
     if (isOpen) {
       window.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'hidden'; // Lock scrolling
+      
+      // Auto-focus close button when modal opens
+      setTimeout(() => {
+        closeButtonRef.current?.focus();
+      }, 50);
     }
 
     return () => {
@@ -44,13 +50,24 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
     <div 
       className={`modal-overlay ${isOpen ? '' : 'hidden'}`}
       onClick={onClose}
+      id="character-details-modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
     >
       <div 
         className="modal-content"
         onClick={(e) => e.stopPropagation()} // Prevent close on clicking content
+        id="character-details-modal"
         style={{ '--accent-color': character.accentColor } as React.CSSProperties}
       >
-        <button className="modal-close-btn" onClick={onClose} aria-label="Закрыть">
+        <button 
+          className="modal-close-btn" 
+          onClick={onClose} 
+          ref={closeButtonRef}
+          id="character-modal-close-btn"
+          aria-label="Закрыть модальное окно"
+        >
           <X size={20} />
         </button>
 
@@ -60,7 +77,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <img 
               src={character.avatar} 
-              alt={character.name} 
+              alt={`Портрет персонажа ${character.name}`} 
               className="modal-character-image"
             />
             
@@ -114,7 +131,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
                 </span>
               </div>
               
-              <h1 style={{ fontSize: '3.6rem', fontWeight: 900, lineHeight: 1.1, marginBottom: '1rem', letterSpacing: '-0.03em' }}>
+              <h1 id="modal-title" style={{ fontSize: '3.6rem', fontWeight: 900, lineHeight: 1.1, marginBottom: '1rem', letterSpacing: '-0.03em' }}>
                 {character.name}
               </h1>
               
@@ -167,12 +184,20 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
               </h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 {character.phrases.map((phrase, idx) => (
-                  <div 
+                  <button 
                     key={idx} 
                     className="phrase-bubble"
                     onClick={() => handleCopyPhrase(phrase)}
                     title="Нажмите, чтобы скопировать цитату"
-                    style={{ '--accent-color': character.accentColor } as React.CSSProperties}
+                    style={{ 
+                      '--accent-color': character.accentColor, 
+                      width: '100%', 
+                      textAlign: 'left',
+                      border: '1px solid rgba(255, 255, 255, 0.06)',
+                      background: 'rgba(255, 255, 255, 0.02)',
+                      fontFamily: 'inherit',
+                      cursor: 'pointer'
+                    } as React.CSSProperties}
                   >
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1.5rem' }}>
                       <span style={{ fontSize: '1.05rem', color: 'var(--text-primary)', fontStyle: 'italic' }}>
@@ -180,7 +205,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
                       </span>
                       <Copy size={16} style={{ color: 'rgba(255, 255, 255, 0.25)', flexShrink: 0 }} />
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>
