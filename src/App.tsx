@@ -116,7 +116,7 @@ function App() {
         ) : (
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))', 
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 330px), 1fr))', 
             gap: '2.5rem' 
           }}>
             {filteredCharacters.map((char) => (
