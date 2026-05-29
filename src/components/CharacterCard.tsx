@@ -1,5 +1,6 @@
 import React from 'react';
 import { type Character } from '../data/characters';
+import { useI18n } from '../i18n';
 import { Terminal, Award } from 'lucide-react';
 
 interface CharacterCardProps {
@@ -8,6 +9,7 @@ interface CharacterCardProps {
 }
 
 export const CharacterCard: React.FC<CharacterCardProps> = ({ character, onClick }) => {
+  const { t } = useI18n();
   // Show top 3 stats on the card preview
   const previewStats = character.stats.slice(0, 3);
 
@@ -26,7 +28,7 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({ character, onClick
       role="button"
       tabIndex={0}
       id={`character-card-${character.id}`}
-      aria-label={`Профиль персонажа: ${character.name}, роль: ${character.role}. Нажмите для просмотра личного дела.`}
+      aria-label={t.cardAriaLabel(character.name, character.role)}
       style={{ '--accent-color': character.accentColor } as React.CSSProperties}
     >
       <div className="character-card-image-container">

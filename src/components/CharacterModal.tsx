@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { type Character } from '../data/characters';
+import { useI18n } from '../i18n';
 import { X, Copy, Zap, Skull, Heart, Target } from 'lucide-react';
 
 interface CharacterModalProps {
@@ -9,6 +10,7 @@ interface CharacterModalProps {
 }
 
 export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpen, onClose }) => {
+  const { t } = useI18n();
   const [showToast, setShowToast] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -66,7 +68,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
           onClick={onClose} 
           ref={closeButtonRef}
           id="character-modal-close-btn"
-          aria-label="Закрыть модальное окно"
+          aria-label={t.closeModal}
         >
           <X size={20} />
         </button>
@@ -77,7 +79,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <img 
               src={character.avatar} 
-              alt={`Портрет персонажа ${character.name}`} 
+              alt={t.portraitAlt(character.name)} 
               className="modal-character-image"
             />
             
@@ -92,28 +94,28 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
                 borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
                 paddingBottom: '0.5rem'
               }}>
-                Спецификация персонажа
+                {t.specsTitle}
               </h3>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', fontSize: '0.95rem' }}>
                 <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                   <Zap size={16} style={{ color: character.accentColor, flexShrink: 0 }} />
-                  <span><strong>Оружие:</strong> {character.specs.weapon}</span>
+                  <span><strong>{t.specWeapon}:</strong> {character.specs.weapon}</span>
                 </div>
                 
                 <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                   <Heart size={16} style={{ color: character.accentColor, flexShrink: 0 }} />
-                  <span><strong>Топливо:</strong> {character.specs.drink}</span>
+                  <span><strong>{t.specFuel}:</strong> {character.specs.drink}</span>
                 </div>
 
                 <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                   <Skull size={16} style={{ color: '#ef4444', flexShrink: 0 }} />
-                  <span><strong>Слабость:</strong> {character.specs.weakness}</span>
+                  <span><strong>{t.specWeakness}:</strong> {character.specs.weakness}</span>
                 </div>
 
                 <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                   <Target size={16} style={{ color: '#10b981', flexShrink: 0 }} />
-                  <span><strong>Мечта:</strong> {character.specs.dream}</span>
+                  <span><strong>{t.specDream}:</strong> {character.specs.dream}</span>
                 </div>
               </div>
             </div>
@@ -143,7 +145,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
             {/* Skills tag group */}
             <div>
               <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.75rem', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-secondary)' }}>
-                Скиллы и стек
+                {t.skillsTitle}
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem', margin: '-0.3rem' }}>
                 {character.skills.map((skill, idx) => (
@@ -157,7 +159,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
             {/* Performance Stats meters */}
             <div>
               <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1rem', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-secondary)' }}>
-                Параметры эффективности
+                {t.statsTitle}
               </h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {character.stats.map((stat, idx) => (
@@ -180,7 +182,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
             {/* Soundboard and Copyable Phrases */}
             <div>
               <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1rem', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-secondary)' }}>
-                Коронные фразы
+                {t.phrasesTitle}
               </h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 {character.phrases.map((phrase, idx) => (
@@ -188,7 +190,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
                     key={idx} 
                     className="phrase-bubble"
                     onClick={() => handleCopyPhrase(phrase)}
-                    title="Нажмите, чтобы скопировать цитату"
+                    title={t.phraseCopyTitle}
                     style={{ 
                       '--accent-color': character.accentColor, 
                       width: '100%', 
@@ -217,7 +219,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
       {showToast && (
         <div className="toast-copied" style={{ borderColor: character.accentColor }}>
           <Zap size={16} style={{ color: character.accentColor }} />
-          <span>Цитата скопирована в буфер!</span>
+          <span>{t.toastCopied}</span>
         </div>
       )}
     </div>
