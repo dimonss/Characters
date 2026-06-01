@@ -82,9 +82,9 @@ const charactersBase: CharacterBase[] = [
         },
       },
       en: {
-        name: 'Vitalik',
+        name: 'Vince',
         role: 'Backend Developer',
-        bio: "Vitalik is a legendary backend dev who lives in the terminal and communicates exclusively via SQL queries. He's convinced that frontend is \"just coloring pages\" while the real magic happens where terabytes of logs are churning. He hates meetings, loves optimizing indexes, and believes any bug can be explained by cosmic radiation.",
+        bio: "Vince is a legendary backend dev who lives in the terminal and communicates exclusively via SQL queries. He's convinced that frontend is \"just coloring pages\" while the real magic happens where terabytes of logs are churning. He hates meetings, loves optimizing indexes, and believes any bug can be explained by cosmic radiation.",
         stats: [
           { label: 'Compilation speed', value: 95 },
           { label: 'Coffee consumption', value: 98 },
@@ -141,9 +141,9 @@ const charactersBase: CharacterBase[] = [
         },
       },
       en: {
-        name: 'Igor',
+        name: 'Gary',
         role: 'Project Manager (PM)',
-        bio: "Igor is a human Gantt chart. He can motivate a team so well that everyone starts working weekends thinking it was their own idea. Igor's main talent is juggling tasks in a tracker and creating the illusion of intense activity for the client. He firmly believes that if you gather nine pregnant women, the baby will be born in one month.",
+        bio: "Gary is a human Gantt chart. He can motivate a team so well that everyone starts working weekends thinking it was their own idea. Gary's main talent is juggling tasks in a tracker and creating the illusion of intense activity for the client. He firmly believes that if you gather nine pregnant women, the baby will be born in one month.",
         stats: [
           { label: 'Usage of the word ASAP', value: 100 },
           { label: 'Meetings in the calendar', value: 98 },
@@ -200,9 +200,9 @@ const charactersBase: CharacterBase[] = [
         },
       },
       en: {
-        name: 'Senya',
+        name: 'Sam',
         role: 'QA Engineer (Tester)',
-        bio: "Senya is the developers' nightmare and the chief destroyer of illusions. He can find a bug where nothing could possibly break — like in static text or a turned-off monitor. Senya genuinely believes that programmers write code solely to make his life harder. He loves writing detailed bug reports with screenshots, video recordings, and console logs that nobody reads.",
+        bio: "Sam is the developers' nightmare and the chief destroyer of illusions. He can find a bug where nothing could possibly break — like in static text or a turned-off monitor. Sam genuinely believes that programmers write code solely to make his life harder. He loves writing detailed bug reports with screenshots, video recordings, and console logs that nobody reads.",
         stats: [
           { label: 'Finding bugs in production', value: 99 },
           { label: 'Creating duplicates in Jira', value: 85 },
@@ -222,7 +222,7 @@ const charactersBase: CharacterBase[] = [
           weapon: 'Screenshot of broken layout with a bunch of red arrows',
           drink: 'Sugar-free energy drink (for late-night testing)',
           weakness: 'Developer\'s response in Jira: "Cannot reproduce"',
-          dream: "Find a bug in Vitalik's compiler and prove that backend messes up too",
+          dream: "Find a bug in Vince's compiler and prove that backend messes up too",
         },
       },
     },
@@ -233,9 +233,9 @@ const charactersBase: CharacterBase[] = [
     accentColor: '#7c3aed', // Purple/violet
     locales: {
       ru: {
-        name: 'Алекс',
+        name: 'Саня',
         role: 'UI/UX Дизайнер',
-        bio: 'Алекс — пиксель-перфекционист и защитник пользовательского опыта. Он видит мир в сетках, градиентах и шрифтовых парах. Алекс считает, что любой функционал бесполезен, если он не выглядит «сексуально» и современно. Постоянно спорит с разработчиками из-за сдвига кнопок на пару пикселей и искренне не понимает, почему они не могут просто перенести макет из Figma в код «один в один».',
+        bio: 'Саня — пиксель-перфекционист и защитник пользовательского опыта. Он видит мир в сетках, градиентах и шрифтовых парах. Саня считает, что любой функционал бесполезен, если он не выглядит «сексуально» и современно. Постоянно спорит с разработчиками из-за сдвига кнопок на пару пикселей и искренне не понимает, почему они не могут просто перенести макет из Figma в код «один в один».',
         stats: [
           { label: 'Любовь к шрифту Inter', value: 99 },
           { label: 'Количество слоев в Figma', value: 95 },
