@@ -2,6 +2,7 @@ import vitalikAvatar from '../assets/Vitalik.jpeg';
 import igorAvatar from '../assets/Igor.jpeg';
 import senyaAvatar from '../assets/Senya.jpeg';
 import alexAvatar from '../assets/Alex.jpeg';
+import antonAvatar from '../assets/Anton_frontend.jpeg';
 import type { Locale } from '../i18n';
 
 export interface CharacterStat {
@@ -282,6 +283,65 @@ const charactersBase: CharacterBase[] = [
           drink: 'Flat white on alt milk (with a leaf art)',
           weakness: 'A developer using default Arial font',
           dream: 'A design system that frontend devs implement pixel-perfect on the first try',
+        },
+      },
+    },
+  },
+  {
+    id: 'anton',
+    avatar: antonAvatar,
+    accentColor: '#0ea5e9', // React sky blue
+    locales: {
+      ru: {
+        name: 'Антон',
+        role: 'Фронтенд Разработчик',
+        bio: 'Антон — повелитель дивов и защитник адаптивной верстки. Он верит, что бэкенд существует только для того, чтобы поставлять JSON для его великолепных интерфейсов. Может часами спорить с Саней о том, можно ли реализовать дизайн без костылей, и с Виталей — о том, почему CORS опять блокирует запросы. Любимое занятие — обновлять зависимости и чинить то, что после этого сломалось.',
+        stats: [
+          { label: 'Скорость центрирования div', value: 99 },
+          { label: 'Ненависть к Safari', value: 95 },
+          { label: 'Любовь к TailwindCSS', value: 92 },
+          { label: 'Размер папки node_modules', value: 100 },
+          { label: 'Вера в фразу "Это проблема на бэке"', value: 98 },
+        ],
+        phrases: [
+          '«У меня локально всё отображается нормально, это у вас Safari старый.»',
+          '«Я просто обновил минорную версию пакета... почему ничего не работает?»',
+          '«Это ошибка CORS, скажите Витале, пусть настроит заголовки.»',
+          '«Там делов на пять минут, просто верстку подправить (нет).»',
+          '«Зачем переписывать? Давай просто бахнем !important и разойдемся.»',
+        ],
+        skills: ['React', 'TypeScript', 'TailwindCSS', 'Vite / Webpack', 'Дебаг в Chrome DevTools', 'Центрирование div'],
+        specs: {
+          weapon: 'Ctrl+C / Ctrl+V со StackOverflow и документация React',
+          drink: 'Латте на банановом молоке (или энергетик в день релиза)',
+          weakness: 'Верстка писем для пиксель-перфект рассылок',
+          dream: 'Удалить Internet Explorer и Safari из истории человечества',
+        },
+      },
+      en: {
+        name: 'Tony',
+        role: 'Frontend Developer',
+        bio: "Tony is the lord of divs and the champion of responsive layouts. He believes the backend exists solely to supply JSON for his gorgeous interfaces. He can debate for hours with Sanya (Alex) about whether a design can be coded without hacks, and with Vince (Vitalik) about why CORS is blocking requests again. His favorite hobby is updating dependencies and fixing whatever breaks.",
+        stats: [
+          { label: 'Centering a div speed', value: 99 },
+          { label: 'Safari hatred', value: 95 },
+          { label: 'Love for TailwindCSS', value: 92 },
+          { label: 'node_modules size', value: 100 },
+          { label: 'Belief in "This is a backend issue"', value: 98 },
+        ],
+        phrases: [
+          '"It renders perfectly on my machine, you probably have an old Safari version."',
+          '"I just updated a minor version of a package... why is everything broken?"',
+          '"This is a CORS error, tell Vince to configure the headers."',
+          '"It\'s a 5-minute fix, just need to adjust the styles (not really)."',
+          '"Why rewrite? Let\'s just throw in !important and call it a day."',
+        ],
+        skills: ['React', 'TypeScript', 'TailwindCSS', 'Vite / Webpack', 'Chrome DevTools debugging', 'Centering divs'],
+        specs: {
+          weapon: 'Ctrl+C / Ctrl+V from StackOverflow & React docs',
+          drink: 'Banana milk latte (or energy drink on release day)',
+          weakness: 'Pixel-perfect HTML emails layouts',
+          dream: 'Erase Internet Explorer and Safari from human history',
         },
       },
     },
