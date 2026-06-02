@@ -1,7 +1,7 @@
-import vitalikAvatar from '../assets/Vitalik.jpeg';
-import igorAvatar from '../assets/Igor.jpeg';
-import senyaAvatar from '../assets/Senya.jpeg';
-import alexAvatar from '../assets/Alex.jpeg';
+import vitalikAvatar from '../assets/Vitalik_backend.jpeg';
+import igorAvatar from '../assets/Igor_pm.jpeg';
+import senyaAvatar from '../assets/Senya_qa.jpeg';
+import alexAvatar from '../assets/Alex_designer.jpeg';
 import antonAvatar from '../assets/Anton_frontend.jpeg';
 import type { Locale } from '../i18n';
 
