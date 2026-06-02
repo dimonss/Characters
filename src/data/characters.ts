@@ -3,6 +3,7 @@ import igorAvatar from '../assets/Igor_pm.jpeg';
 import senyaAvatar from '../assets/Senya_qa.jpeg';
 import alexAvatar from '../assets/Alex_designer.jpeg';
 import antonAvatar from '../assets/Anton_frontend.jpeg';
+import stanislavAvatar from '../assets/Stanislav_Supervisor.jpeg';
 import type { Locale } from '../i18n';
 
 export interface CharacterStat {
@@ -342,6 +343,65 @@ const charactersBase: CharacterBase[] = [
           drink: 'Banana milk latte (or energy drink on release day)',
           weakness: 'Pixel-perfect HTML emails layouts',
           dream: 'Erase Internet Explorer and Safari from human history',
+        },
+      },
+    },
+  },
+  {
+    id: 'stanislav',
+    avatar: stanislavAvatar,
+    accentColor: '#991b1b', // Red-800
+    locales: {
+      ru: {
+        name: 'Станислав',
+        role: 'Руководитель департамента',
+        bio: 'Станислав Яковлевич — гроза бюджетов и главный адепт методологии «работы на результат». Он твердо убежден, что лучшая мотивация для команды — это новые амбициозные KPI и урезание расходов на печенье. Умеет произносить вдохновляющие часовые речи о «синергии» и «общей семье», после которых разработчики плачут, а менеджеры судорожно перерисовывают диаграммы Ганта.',
+        stats: [
+          { label: 'Любовь к аббревиатурам (KPI, OKR)', value: 100 },
+          { label: 'Урезание бюджетов на тимбилдинги', value: 95 },
+          { label: 'Пассивная агрессия в письмах', value: 92 },
+          { label: 'Навык "Делегирование делегирования"', value: 98 },
+          { label: 'Вера в фразу "Мы — одна семья"', value: 99 },
+        ],
+        phrases: [
+          '«Коллеги, ради общего блага нам нужно затянуть пояса (но не руководству).»',
+          '«Я не вижу ваших горящих глаз в отчетах об эффективности.»',
+          '«Давайте проведем ретроспективу ретроспективы, чтобы понять, где мы теряем фокус.»',
+          '«Мы должны работать как единый организм, поэтому со следующей недели отменяем бесплатные обеды.»',
+          '«Я услышал вашу позицию, но мы сделаем так, как решило руководство на комитете.»',
+        ],
+        skills: ['Управление KPI / OKR', 'Сокращение затрат', 'Написание писем с темой URGENT', 'Микроменеджмент', 'Мотивационные речи', 'Игнорирование здравого смысла'],
+        specs: {
+          weapon: 'PDF-отчет со стрелочками вниз',
+          drink: 'Двойной эспрессо (без молока, сахара и жалости)',
+          weakness: 'Внезапный уход лид-разработчика перед релизом',
+          dream: 'Заменить всю команду разработки одной лицензией на ChatGPT',
+        },
+      },
+      en: {
+        name: 'Stan',
+        role: 'Department Supervisor',
+        bio: "Stan is the budget slayer and the ultimate champion of \"result-oriented\" work. He firmly believes that the best motivation for a team is new ambitious KPIs and cutting cookie expenses. He can give inspiring, hour-long speeches about \"synergies\" and \"being one family,\" after which developers cry and managers frantically redraw Gantt charts.",
+        stats: [
+          { label: 'Love for acronyms (KPI, OKR)', value: 100 },
+          { label: 'Cutting team building budgets', value: 95 },
+          { label: 'Passive aggression in emails', value: 92 },
+          { label: '“Delegating the delegation” skill', value: 98 },
+          { label: 'Belief in "We are one family"', value: 99 },
+        ],
+        phrases: [
+          '"Team, for the greater good we need to tighten our belts (management excluded)."',
+          '"I don\'t see your eyes glowing in the performance reports."',
+          '"Let\'s hold a retrospective of the retrospective to see where we lost focus."',
+          '"We must work as a single organism, so starting next week, free lunches are canceled."',
+          '"I hear your feedback, but we will proceed with the committee\'s decision."',
+        ],
+        skills: ['KPI / OKR management', 'Cost reduction', 'Writing emails with URGENT subject lines', 'Micromanagement', 'Motivational speeches', 'Ignoring common sense'],
+        specs: {
+          weapon: 'PDF report with downward-pointing red arrows',
+          drink: 'Double espresso (no milk, no sugar, no mercy)',
+          weakness: 'A key developer resigning right before a release',
+          dream: 'Replace the entire dev team with a single ChatGPT subscription',
         },
       },
     },
