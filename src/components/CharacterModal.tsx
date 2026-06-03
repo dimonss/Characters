@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { type Character } from '../data/characters';
 import { useI18n } from '../i18n';
-import { X, Copy, Zap, Skull, Heart, Target } from 'lucide-react';
+import { X, Copy, Zap, Skull, Heart, Target, Volume2 } from 'lucide-react';
 
 interface CharacterModalProps {
   character: Character | null;
@@ -116,6 +116,11 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({ character, isOpe
                 <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                   <Target size={16} style={{ color: '#10b981', flexShrink: 0 }} />
                   <span><strong>{t.specDream}:</strong> {character.specs.dream}</span>
+                </div>
+
+                <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+                  <Volume2 size={16} style={{ color: 'var(--accent-cyan)', flexShrink: 0 }} />
+                  <span><strong>{t.specVoice}:</strong> {character.specs.voice}</span>
                 </div>
               </div>
             </div>

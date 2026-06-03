@@ -25,6 +25,7 @@ export interface UITranslations {
   specFuel: string;
   specWeakness: string;
   specDream: string;
+  specVoice: string;
   skillsTitle: string;
   statsTitle: string;
   phrasesTitle: string;
@@ -57,6 +58,7 @@ const translations: Record<Locale, UITranslations> = {
     specFuel: 'Топливо',
     specWeakness: 'Слабость',
     specDream: 'Мечта',
+    specVoice: 'Голос',
     skillsTitle: 'Скиллы и стек',
     statsTitle: 'Параметры эффективности',
     phrasesTitle: 'Коронные фразы',
@@ -86,6 +88,7 @@ const translations: Record<Locale, UITranslations> = {
     specFuel: 'Fuel',
     specWeakness: 'Weakness',
     specDream: 'Dream',
+    specVoice: 'Voice',
     skillsTitle: 'Skills & Stack',
     statsTitle: 'Performance Stats',
     phrasesTitle: 'Signature Phrases',

@@ -27,6 +27,7 @@ export interface Character {
     drink: string;  // Любимый напиток
     weakness: string; // Слабость
     dream: string;  // Мечта
+    voice: string;  // Описание голоса
   };
 }
 
@@ -42,6 +43,7 @@ interface CharacterLocalized {
     drink: string;
     weakness: string;
     dream: string;
+    voice: string;
   };
 }
 
@@ -82,6 +84,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Двойной эспрессо (без молока, сахара и жалости)',
           weakness: 'Внезапный уход лид-разработчика перед релизом',
           dream: 'Заменить всю команду разработки одной лицензией на ChatGPT',
+          voice: 'Громкий, авторитарный бас, переходящий на фальцет при обсуждении бюджетов',
         },
       },
       en: {
@@ -108,6 +111,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Double espresso (no milk, no sugar, no mercy)',
           weakness: 'A key developer resigning right before a release',
           dream: 'Replace the entire dev team with a single ChatGPT subscription',
+          voice: 'Loud, authoritative bass, switching to falsetto when discussing budgets',
         },
       },
     },
@@ -141,6 +145,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Матча-латте на кокосовом молоке с сиропом топинамбура',
           weakness: 'Вопрос разработчика: "А где ТЗ?"',
           dream: 'Закрыть проект вовремя без багов и сжечь все спринты',
+          voice: 'Бодрый, вечно торопливый тенор с нотками панического дружелюбия',
         },
       },
       en: {
@@ -167,6 +172,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Matcha latte on coconut milk with Jerusalem artichoke syrup',
           weakness: 'Developer asking: "Where are the requirements?"',
           dream: 'Close the project on time with zero bugs and burn all sprints',
+          voice: 'Upbeat, hurried tenor with undertones of panicked friendliness',
         },
       },
     },
@@ -200,6 +206,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Американо без сахара (черный как его душа)',
           weakness: 'Внезапный звонок в Zoom без предупреждения',
           dream: 'Написать идеальный код, который заменит всех менеджеров скриптом на Bash',
+          voice: 'Монотонный, сонный баритон, оживающий только при слове "оптимизация"',
         },
       },
       en: {
@@ -226,6 +233,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Black Americano, no sugar (dark as his soul)',
           weakness: 'Surprise Zoom call with no warning',
           dream: 'Write the perfect code that replaces all managers with a Bash script',
+          voice: 'Monotonous, sleepy baritone, waking up only at the word "optimization"',
         },
       },
     },
@@ -259,6 +267,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Латте на банановом молоке (или энергетик в день релиза)',
           weakness: 'Верстка писем для пиксель-перфект рассылок',
           dream: 'Удалить Internet Explorer и Safari из истории человечества',
+          voice: 'Энергичный, слегка писклявый юношеский голос с быстрой речью',
         },
       },
       en: {
@@ -285,6 +294,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Banana milk latte (or energy drink on release day)',
           weakness: 'Pixel-perfect HTML emails layouts',
           dream: 'Erase Internet Explorer and Safari from human history',
+          voice: 'Energetic, slightly squeaky youthful voice with rapid-fire delivery',
         },
       },
     },
@@ -318,6 +328,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Флэт уайт на альтернативном молоке (с рисунком листика)',
           weakness: 'Разработчик, использующий стандартный шрифт Arial',
           dream: 'Дизайн-система, которую фронтендеры верстают в точности до пикселя с первого раза',
+          voice: 'Мягкий, томный голос с растянутыми гласными и обилием англицизмов',
         },
       },
       en: {
@@ -344,6 +355,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Flat white on alt milk (with a leaf art)',
           weakness: 'A developer using default Arial font',
           dream: 'A design system that frontend devs implement pixel-perfect on the first try',
+          voice: 'Soft, languid voice with drawn-out vowels and heavy buzzword usage',
         },
       },
     },
@@ -377,6 +389,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Энергетик без сахара (чтобы тестировать ночью)',
           weakness: 'Ответ разработчика в Jira: "Не воспроизводится"',
           dream: 'Найти баг в компиляторе Витали и доказать, что бэкенд тоже косячит',
+          voice: 'Ехидный, вкрадчивый голос с интонацией "я поймал тебя на ошибке"',
         },
       },
       en: {
@@ -403,6 +416,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Sugar-free energy drink (for late-night testing)',
           weakness: 'Developer\'s response in Jira: "Cannot reproduce"',
           dream: "Find a bug in Vince's compiler and prove that backend messes up too",
+          voice: 'Sarcastic, insidious voice with an "I caught you making a mistake" tone',
         },
       },
     },
@@ -436,6 +450,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Матча на безлактозном молоке с лавандовым сиропом',
           weakness: 'Кандидат, который просит зарплату в долларах и работу без созвонов',
           dream: 'Устроить тимбилдинг, с которого никто не попытается сбежать через окно',
+          voice: 'Преувеличенно мягкий, успокаивающий терапевтический альт с фальшивым дружелюбием',
         },
       },
       en: {
@@ -462,6 +477,7 @@ const charactersBase: CharacterBase[] = [
           drink: 'Matcha on lactose-free milk with lavender syrup',
           weakness: 'A candidate asking for salary in USD and zero meetings',
           dream: 'Organize a team building where no one tries to escape through a bathroom window',
+          voice: 'Exaggeratedly soft, soothing therapeutic alto with forced friendliness',
         },
       },
     },
