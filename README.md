@@ -1,15 +1,15 @@
-# Characters Dashboard (YouTube Series "Office Front") / Панель персонажей (YouTube-сериал «Офисный Фронт»)
+# Characters Dashboard (YouTube Series "Release Zone") / Панель персонажей (YouTube-сериал «Зона релиза»)
 
-An interactive, premium dashboard showcasing the profiles of the development team and management from the legendary YouTube show **"Office Front"**.
+An interactive, premium dashboard showcasing the profiles of the development and management team from the legendary YouTube show **"Release Zone"** working at **Legacy Systems Inc.**.
 
-Интерактивная премиум-панель персонажей, представляющая профили команды разработки и менеджмента легендарного YouTube-сериала **«Офисный Фронт»**.
+Интерактивная премиум-панель персонажей, представляющая профили команды разработки и менеджмента легендарного YouTube-сериала **«Зона релиза»**, работающих в компании **«Костыль Инжиниринг»**.
 
 ---
 
 ## 🇬🇧 English Version
 
 ### 🚀 About the Project
-This project is a React + TypeScript + Vite web application showcasing interactive cards and detailed dossiers of the key characters from the "Office Front" show. The application features full bilingual (English & Russian) support, a search engine filtering by name, skills, and bio, and a modern glassmorphic interface with smooth animations and dynamic background glows.
+This project is a React + TypeScript + Vite web application showcasing interactive cards and detailed dossiers of the key characters from the "Release Zone" show. The application features full bilingual (English & Russian) support, a search engine filtering by name, skills, and bio, and a modern glassmorphic interface with smooth animations and dynamic background glows.
 
 ### 🎭 Characters Profiles
 *   **Stan (Stanislav)** — *Department Supervisor*: The budget slayer and champion of result-oriented KPIs.
@@ -65,7 +65,7 @@ This project is a React + TypeScript + Vite web application showcasing interacti
 ## 🇷🇺 Русская версия
 
 ### 🚀 О проекте
-Данный проект представляет собой веб-приложение на React + TypeScript + Vite, отображающее интерактивные карточки и подробные досье ключевых персонажей сериала «Офисный Фронт». Приложение поддерживает полноценную двуязычность (русский и английский языки), умный поиск по именам, навыкам и биографии, а также современный стеклянный (glassmorphism) дизайн с плавными микро-анимациями и динамическим неоновым свечением.
+Данный проект представляет собой веб-приложение на React + TypeScript + Vite, отображающее интерактивные карточки и подробные досье ключевых персонажей сериала «Зона релиза» (работающих в компании «Костыль Инжиниринг»). Приложение поддерживает полноценную двуязычность (русский и английский языки), умный поиск по именам, навыкам и биографии, а также современный стеклянный (glassmorphism) дизайн с плавными микро-анимациями и динамическим неоновым свечением.
 
 ### 🎭 Профили персонажей
 *   **Станислав** — *Руководитель департамента*: Гроза бюджетов, приверженец жестких KPI и урезания печенья.

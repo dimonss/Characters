@@ -426,7 +426,7 @@ const charactersBase: CharacterBase[] = [
         phrases: [
           '«Коллеги, давайте сохранять экологичность в общении.»',
           '«Жду всех на пятничный тимбилдинг, явка обязательна, будем играть в крокодила!»',
-          '«Как ты себя чувствуешь в нашей компании? Расскажи на 1-to-1.»',
+          '«Как ты себя чувствуешь в «Костыль Инжиниринг»? Расскажи на 1-to-1.»',
           '«У нас молодая, дружная команда и динамично развивающаяся атмосфера!»',
           '«Мы ищем не просто разработчика, а настоящего team player с горящими глазами.»',
         ],
@@ -452,7 +452,7 @@ const charactersBase: CharacterBase[] = [
         phrases: [
           '"Team, let\'s keep our communication eco-friendly and constructive."',
           '"Looking forward to seeing everyone at Friday\'s team building, attendance is mandatory, we will play Charades!"',
-          '"How do you feel in our company? Tell me in our 1-to-1."',
+          '"How do you feel at Legacy Systems Inc.? Tell me in our 1-to-1."',
           '"We have a young, friendly team and a dynamically developing environment!"',
           '"We aren\'t just looking for a developer, we need a true team player with glowing eyes."',
         ],

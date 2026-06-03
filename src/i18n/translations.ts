@@ -37,9 +37,9 @@ export interface UITranslations {
 
 const translations: Record<Locale, UITranslations> = {
   ru: {
-    seriesLabel: 'YouTube Сериал • Офисный Фронт',
+    seriesLabel: 'YouTube Сериал • Зона релиза',
     pageTitle: 'Персонажи',
-    pageSubtitle: 'Познакомьтесь с командой разработчиков и менеджеров легендарного шоу!',
+    pageSubtitle: 'Познакомьтесь с командой разработки и менеджмента «Костыль Инжиниринг»!',
 
     searchPlaceholder: 'Поиск по касту (Имя, Скиллы, Роль...)',
     searchAriaLabel: 'Поиск по касту персонажей',
@@ -66,9 +66,9 @@ const translations: Record<Locale, UITranslations> = {
     portraitAlt: (name) => `Портрет персонажа ${name}`,
   },
   en: {
-    seriesLabel: 'YouTube Series • Office Front',
+    seriesLabel: 'YouTube Series • Release Zone',
     pageTitle: 'Characters',
-    pageSubtitle: 'Meet the legendary cast of developers and managers!',
+    pageSubtitle: 'Meet the development and management team of Legacy Systems Inc.!',
 
     searchPlaceholder: 'Search cast (Name, Skills, Role...)',
     searchAriaLabel: 'Search through characters cast',
