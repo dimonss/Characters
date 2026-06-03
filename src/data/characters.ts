@@ -4,6 +4,7 @@ import senyaAvatar from '../assets/Senya_qa.jpeg';
 import alexAvatar from '../assets/Alex_designer.jpeg';
 import antonAvatar from '../assets/Anton_frontend.jpeg';
 import stanislavAvatar from '../assets/Stanislav_Supervisor.jpeg';
+import lenaAvatar from '../assets/Lena_HR.jpeg';
 import type { Locale } from '../i18n';
 
 export interface CharacterStat {
@@ -402,6 +403,65 @@ const charactersBase: CharacterBase[] = [
           drink: 'Sugar-free energy drink (for late-night testing)',
           weakness: 'Developer\'s response in Jira: "Cannot reproduce"',
           dream: "Find a bug in Vince's compiler and prove that backend messes up too",
+        },
+      },
+    },
+  },
+  {
+    id: 'lena',
+    avatar: lenaAvatar,
+    accentColor: '#db2777', // Pink-600
+    locales: {
+      ru: {
+        name: 'Лена',
+        role: 'HR-специалист',
+        bio: 'Лена — главный архитектор корпоративной культуры и хранительница психологического здоровья коллектива (по крайней мере, так написано в её должностной инструкции). Она способна разглядеть «токсичность» в простом приветствии в Slack и искренне верит, что любой межличностный конфликт можно решить с помощью пиццы и игры в настолки. Мастерски проводит тимбилдинги, на которых все чувствуют себя неловко, но очень сплоченно.',
+        stats: [
+          { label: 'Поиск «токсичности» в чатах', value: 98 },
+          { label: 'Организация неловких тимбилдингов', value: 95 },
+          { label: 'Фраза «Давай обсудим на 1-to-1»', value: 100 },
+          { label: 'Скорость ответа кандидатам', value: 15 },
+          { label: 'Любовь к печенькам в офисе', value: 90 },
+        ],
+        phrases: [
+          '«Коллеги, давайте сохранять экологичность в общении.»',
+          '«Жду всех на пятничный тимбилдинг, явка обязательна, будем играть в крокодила!»',
+          '«Как ты себя чувствуешь в нашей компании? Расскажи на 1-to-1.»',
+          '«У нас молодая, дружная команда и динамично развивающаяся атмосфера!»',
+          '«Мы ищем не просто разработчика, а настоящего team player с горящими глазами.»',
+        ],
+        skills: ['Рекрутинг / Сорсинг', 'Проведение 1-to-1 созвонов', 'Разрешение конфликтов пиццей', 'Написание постов о вакансиях с эмодзи', 'Эмпатия по расписанию'],
+        specs: {
+          weapon: 'Приглашение на созвон «1-to-1: Поговорить» без указания темы',
+          drink: 'Матча на безлактозном молоке с лавандовым сиропом',
+          weakness: 'Кандидат, который просит зарплату в долларах и работу без созвонов',
+          dream: 'Устроить тимбилдинг, с которого никто не попытается сбежать через окно',
+        },
+      },
+      en: {
+        name: 'Lena',
+        role: 'HR Manager',
+        bio: 'Lena is the chief architect of corporate culture and the guardian of the team\'s mental health (at least, that\'s what her job description says). She can spot "toxicity" in a simple Slack greeting and believes any interpersonal conflict can be resolved with pizza and board games. She masterfully organizes team buildings where everyone feels awkward but very united.',
+        stats: [
+          { label: 'Spotting "toxicity" in chats', value: 98 },
+          { label: 'Organizing awkward team buildings', value: 95 },
+          { label: '"Let\'s discuss this on a 1-to-1" frequency', value: 100 },
+          { label: 'Candidate response speed', value: 15 },
+          { label: 'Love for office cookies', value: 90 },
+        ],
+        phrases: [
+          '"Team, let\'s keep our communication eco-friendly and constructive."',
+          '"Looking forward to seeing everyone at Friday\'s team building, attendance is mandatory, we will play Charades!"',
+          '"How do you feel in our company? Tell me in our 1-to-1."',
+          '"We have a young, friendly team and a dynamically developing environment!"',
+          '"We aren\'t just looking for a developer, we need a true team player with glowing eyes."',
+        ],
+        skills: ['Recruiting / Sourcing', 'Running 1-to-1 meetings', 'Resolving conflicts with pizza', 'Writing job posts with emojis', 'Scheduled empathy'],
+        specs: {
+          weapon: 'A calendar invite titled "1-to-1: Just to chat" with no description',
+          drink: 'Matcha on lactose-free milk with lavender syrup',
+          weakness: 'A candidate asking for salary in USD and zero meetings',
+          dream: 'Organize a team building where no one tries to escape through a bathroom window',
         },
       },
     },
