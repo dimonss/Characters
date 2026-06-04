@@ -18,6 +18,8 @@ This project is a React + TypeScript + Vite web application showcasing interacti
 *   **Tony (Anton)** — *Frontend Developer*: The lord of divs and TailwindCSS who fights Safari and centers layout elements.
 *   **Alex (Sanya)** — *UI/UX Designer*: A pixel-perfectionist Figma wizard who speaks in gradients and glassmorphism.
 *   **Sam (Senya)** — *QA Engineer*: The developers' worst nightmare, dedicated to breaking prod and writing detailed bug reports.
+*   **Lena** — *HR Manager*: The corporate culture architect and guardian of the team's mental health who resolves conflicts with pizza.
+*   **Anna** — *Chief Accountant*: The keeper of the corporate treasury and terror of all travel expense reports.
 
 ### ✨ Key Features
 *   **Dual Language Support (i18n)**: Instant locale switching between English and Russian without full page reloads, fully localized dossiers.
@@ -74,6 +76,8 @@ This project is a React + TypeScript + Vite web application showcasing interacti
 *   **Антон** — *Фронтенд Разработчик*: Повелитель дивов и TailwindCSS, сражающийся с Safari и CORS.
 *   **Саня** — *UI/UX Дизайнер*: Пиксель-перфекционист, творящий в Figma и отстаивающий неоновые градиенты.
 *   **Сеня** — *Тестировщик (QA)*: Гроза разработчиков, мастер поиска edge-кейсов и подробных баг-репортов.
+*   **Лена** — *HR-специалист*: Архитектор корпоративной культуры, проводящая тимбилдинги и решающая любые разногласия пиццей.
+*   **Анна** — *Главный бухгалтер*: Хранительница казны компании и гроза всех командировочных отчетов и чеков.
 
 ### ✨ Ключевые возможности
 *   **Полная локализация (i18n)**: Мгновенное переключение интерфейса между русским и английским языками без перезагрузки страницы.
