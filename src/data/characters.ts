@@ -5,6 +5,7 @@ import alexAvatar from '../assets/Alex_designer.jpeg';
 import antonAvatar from '../assets/Anton_frontend.jpeg';
 import stanislavAvatar from '../assets/Stanislav_Supervisor.jpeg';
 import lenaAvatar from '../assets/Lena_HR.jpeg';
+import annaAvatar from '../assets/Anna_accountant.jpeg';
 import type { Locale } from '../i18n';
 
 export interface CharacterStat {
@@ -478,6 +479,67 @@ const charactersBase: CharacterBase[] = [
           weakness: 'A candidate asking for salary in USD and zero meetings',
           dream: 'Organize a team building where no one tries to escape through a bathroom window',
           voice: 'Exaggeratedly soft, soothing therapeutic alto with forced friendliness',
+        },
+      },
+    },
+  },
+  {
+    id: 'anna',
+    avatar: annaAvatar,
+    accentColor: '#047857', // Emerald-700
+    locales: {
+      ru: {
+        name: 'Анна',
+        role: 'Главный бухгалтер',
+        bio: 'Анна Сергеевна — хранительница корпоративной казны и гроза всех командировочных отчетов. Её боятся даже руководители департаментов, когда дело доходит до неверно оформленных чеков за такси. Она способна найти лишнюю копейку в отчетах пятилетней давности и искренне считает, что разработчики придумывают новые технологии только для того, чтобы усложнить заполнение деклараций по НДС.',
+        stats: [
+          { label: 'Обнаружение ошибок в чеках', value: 100 },
+          { label: 'Ненависть к незакрытым авансам', value: 98 },
+          { label: 'Фраза «Где акты?!»', value: 95 },
+          { label: 'Скорость выплаты зарплаты', value: 99 },
+          { label: 'Любовь к Excel-таблицам', value: 90 },
+        ],
+        phrases: [
+          '«Я не приму этот чек, на нём не виден QR-код!»',
+          '«Кто опять не сдал акты до 25-го числа? Зарплаты не будет!»',
+          '«В смысле "потерял чек"? Ищи где хочешь, или вычту из зарплаты.»',
+          '«У меня баланс не сходится на две копейки, никто из офиса не уйдет!»',
+          '«Расходы на тимбилдинг не подлежат налоговому вычету, Станислав.»',
+        ],
+        skills: ['1С:Бухгалтерия', 'Аудит расходов', 'Наведение ужаса на сотрудников', 'Сведение баланса в ноль', 'Заполнение налоговых деклараций'],
+        specs: {
+          weapon: 'Двухкилограммовая папка с годовым отчетом',
+          drink: 'Цикорий (кофе вреден для давления при сведении баланса)',
+          weakness: 'Вопрос: «А можно провести это как представительские расходы?»',
+          dream: 'Чтобы все чеки автоматически загружались в 1С без участия людей',
+          voice: 'Резкий, пронзительный альт с металлическими нотками, от которого вздрагивают даже принтеры',
+        },
+      },
+      en: {
+        name: 'Anna',
+        role: 'Chief Accountant',
+        bio: 'Anna is the keeper of the corporate treasury and the terror of all travel expense reports. Even department heads fear her when it comes to incorrectly formatted taxi receipts. She can find a missing penny in a five-year-old report and genuinely believes developers invent new technologies just to complicate VAT declarations.',
+        stats: [
+          { label: 'Detecting receipt errors', value: 100 },
+          { label: 'Hatred for unclosed cash advances', value: 98 },
+          { label: '"Where are the invoice acts?!" frequency', value: 95 },
+          { label: 'Payroll processing speed', value: 99 },
+          { label: 'Love for office Excel sheets', value: 90 },
+        ],
+        phrases: [
+          '"I won\'t accept this receipt, the QR code is blurry!"',
+          '"Who forgot to submit their invoices by the 25th? No payroll for you!"',
+          '"What do you mean \'lost the receipt\'? Find it, or I will deduct it from your pay."',
+          '"My balance is off by two pennies, nobody leaves the office!"',
+          '"Team building expenses are not tax-deductible, Stan."',
+        ],
+        skills: ['1C:Enterprise / ERP', 'Expense auditing', 'Striking fear into employees', 'Balancing ledger to zero', 'Tax declaration filing'],
+        specs: {
+          weapon: 'A 2kg folder containing the annual financial report',
+          drink: 'Chicory (coffee is bad for blood pressure when balancing books)',
+          weakness: 'The question: "Can we write this off as business entertainment?"',
+          dream: 'For all receipts to automatically upload to ERP without human intervention',
+          voice: 'Sharp, piercing alto with metallic undertones that makes even printers flinch',
         },
       },
     },
