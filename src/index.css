@@ -140,6 +140,47 @@ h1, h2, h3, h4 {
   display: block;
 }
 
+.series-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.35rem 0.85rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.series-link span {
+  transition: color 0.3s ease;
+}
+
+.series-link .external-icon {
+  color: var(--text-secondary);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.series-link:hover {
+  border-color: var(--accent-cyan);
+  background: rgba(0, 242, 254, 0.06);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
+  transform: translateY(-2px);
+}
+
+.series-link:hover span {
+  color: var(--accent-cyan) !important;
+}
+
+.series-link:hover .external-icon {
+  color: var(--accent-cyan);
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
 /* Modern Card Layout */
 .character-card {
   background: var(--panel-bg);

@@ -4,7 +4,7 @@ import { CharacterCard } from './components/CharacterCard';
 import { CharacterModal } from './components/CharacterModal';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { useI18n } from './i18n';
-import { Search, Tv } from 'lucide-react';
+import { Search, Tv, ExternalLink } from 'lucide-react';
 import { reachGoal, trackHit } from './utils/metrika';
 
 function App() {
@@ -66,12 +66,18 @@ function App() {
       <div className="container">
         {/* Header Section */}
         <header className="header-area">
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem' }}>
-            <Tv size={18} style={{ color: 'var(--accent-cyan)' }} />
+          <a 
+            href="https://www.youtube.com/@%D0%97%D0%BE%D0%BD%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D0%B7%D0%B0" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="series-link"
+          >
+            <Tv size={16} style={{ color: 'var(--accent-cyan)' }} />
             <span style={{ fontSize: '0.85rem', fontFamily: 'var(--font-mono)', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-secondary)', letterSpacing: '0.15em' }}>
               {t.seriesLabel}
             </span>
-          </div>
+            <ExternalLink size={12} className="external-icon" />
+          </a>
           
           <h1 className="title-main">
             {t.pageTitle}
