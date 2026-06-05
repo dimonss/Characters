@@ -4,11 +4,13 @@ import { CharacterCard } from './components/CharacterCard';
 import { CharacterModal } from './components/CharacterModal';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { useI18n } from './i18n';
+import { useDocumentMetadata } from './hooks/useDocumentMetadata';
 import { Search, Tv, ExternalLink } from 'lucide-react';
 import { reachGoal, trackHit } from './utils/metrika';
 
 function App() {
   const { locale, t } = useI18n();
+  useDocumentMetadata(t.metaTitle, t.metaDescription);
   const characters = useMemo(() => getCharacters(locale), [locale]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);

@@ -42,12 +42,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     setLocale(locale === 'ru' ? 'en' : 'ru');
   }, [locale, setLocale]);
 
+  const t = translations[locale];
+
   // Set initial lang attribute
   useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
-
-  const t = translations[locale];
 
   return (
     <I18nContext.Provider value={{ locale, t, setLocale, toggleLocale }}>
@@ -56,6 +56,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useI18n() {
   const ctx = useContext(I18nContext);
   if (!ctx) throw new Error('useI18n must be used within <I18nProvider>');

@@ -34,6 +34,10 @@ export interface UITranslations {
 
   // Modal portrait alt
   portraitAlt: (name: string) => string;
+
+  // Meta tags
+  metaTitle: string;
+  metaDescription: string;
 }
 
 const translations: Record<Locale, UITranslations> = {
@@ -66,6 +70,9 @@ const translations: Record<Locale, UITranslations> = {
     toastCopied: 'Цитата скопирована в буфер!',
 
     portraitAlt: (name) => `Портрет персонажа ${name}`,
+
+    metaTitle: 'Каст Сериала: Зона релиза | Скетчбук «Костыль Инжиниринг»',
+    metaDescription: 'Интерактивный скетчбук персонажей комедийного YouTube-сериала «Зона релиза» про IT-разработку и офисные будни в «Костыль Инжиниринг».',
   },
   en: {
     seriesLabel: 'YouTube Series • Release Zone',
@@ -96,6 +103,9 @@ const translations: Record<Locale, UITranslations> = {
     toastCopied: 'Quote copied to clipboard!',
 
     portraitAlt: (name) => `${name}'s portrait`,
+
+    metaTitle: 'Show Cast: Release Zone | Legacy Systems Inc. Dossier',
+    metaDescription: 'An interactive, premium dashboard showcasing the profiles of the development and management team from the YouTube show "Release Zone" working at Legacy Systems Inc.',
   },
 };
 
