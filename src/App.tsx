@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { getCharacters, type Character } from './data/characters';
 import { CharacterCard } from './components/CharacterCard';
 import { CharacterModal } from './components/CharacterModal';
@@ -6,7 +6,6 @@ import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { useI18n } from './i18n';
 import { useDocumentMetadata } from './hooks/useDocumentMetadata';
 import { Search, Tv, ExternalLink } from 'lucide-react';
-import { reachGoal, trackHit } from './utils/metrika';
 
 function App() {
   const { locale, t } = useI18n();
@@ -16,14 +15,6 @@ function App() {
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Track search queries with debounce
-  useEffect(() => {
-    if (!searchTerm.trim()) return;
-    const handler = setTimeout(() => {
-      reachGoal('search', { query: searchTerm });
-    }, 1500);
-    return () => clearTimeout(handler);
-  }, [searchTerm]);
 
   // Handle Search filtering
   const filteredCharacters = characters.filter((char) => {
@@ -39,8 +30,6 @@ function App() {
   const handleOpenModal = (char: Character) => {
     setSelectedCharacter(char);
     setIsModalOpen(true);
-    reachGoal('view_character', { name: char.name, id: char.id });
-    trackHit(`/character/${char.id}`, { title: char.name });
   };
 
   const handleCloseModal = () => {

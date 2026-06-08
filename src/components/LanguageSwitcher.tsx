@@ -2,14 +2,11 @@ import React from 'react';
 import { useI18n, type Locale } from '../i18n';
 import { Globe } from 'lucide-react';
 
-import { reachGoal } from '../utils/metrika';
-
 export const LanguageSwitcher: React.FC = () => {
   const { locale, setLocale } = useI18n();
 
   const handleSwitch = (newLocale: Locale) => {
     setLocale(newLocale);
-    reachGoal('change_language', { locale: newLocale });
   };
 
   return (
